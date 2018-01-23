@@ -1,0 +1,43 @@
+<aura:component >
+    <aura:attribute name="appointment" type="Appointment__c" description="Appointment to render" required="true" />
+    <aura:attribute name="startTime" type="String" access="private" />
+    <aura:attribute name="startDate" type="String" access="private" />
+    <aura:attribute name="leadAddress" type="String" access="private" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.appointment}" action="{!c.updateAppointment}" />
+    
+    <div style="padding-left: 2rem; padding-top: 5rem; position: relative;">
+      <div class="slds-popover slds-popover_tooltip slds-nubbin_left" role="tooltip" id="help" style="position: absolute; top: 0px; left: 1rem;">
+        <div class="slds-popover__body">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1">
+                    Assigned to: {!v.appointment.Owner.Name}
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    Initial Appointment Date: {!v.startDate}
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    Initial Appointment Time: {!v.startTime}
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    Email: {!v.appointment.Lead__r.Email}
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    Subject: {!v.appointment.Subject__c}
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    Show Time As: popup
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    Location: {!v.leadAddress}
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    Phone: {!v.appointment.Lead__r.Phone}
+                </div>
+        	</div>
+        </div>
+      </div>
+    </div>
+
+</aura:component>

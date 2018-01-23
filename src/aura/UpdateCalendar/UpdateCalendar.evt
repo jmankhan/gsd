@@ -1,0 +1,3 @@
+<aura:event type="APPLICATION" description="Fired when new data is available for the Estimator Calendar">
+    <aura:attribute name="appointments" type="Object[]" description="New appointments loaded" />
+</aura:event>

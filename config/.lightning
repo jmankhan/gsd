@@ -1,0 +1,444 @@
+[
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yCtxSAE"
+        },
+        "Id": "0Ad1N000000yCtxSAE",
+        "AuraDefinitionBundleId": "0Ab1N000000AJ6fSAG",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AJ6fSAG"
+            },
+            "DeveloperName": "CreateAppointment"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000xp2USAQ"
+        },
+        "Id": "0Ad1N000000xp2USAQ",
+        "AuraDefinitionBundleId": "0Ab1N000000AJ6fSAG",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AJ6fSAG"
+            },
+            "DeveloperName": "CreateAppointment"
+        },
+        "DefType": "APPLICATION",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000xpKpSAI"
+        },
+        "Id": "0Ad1N000000xpKpSAI",
+        "AuraDefinitionBundleId": "0Ab1N000000AJ6fSAG",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AJ6fSAG"
+            },
+            "DeveloperName": "CreateAppointment"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000xpJ4SAI"
+        },
+        "Id": "0Ad1N000000xpJ4SAI",
+        "AuraDefinitionBundleId": "0Ab1N000000AJ92SAG",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AJ92SAG"
+            },
+            "DeveloperName": "CustomerInformation"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000xwOZSAY"
+        },
+        "Id": "0Ad1N000000xwOZSAY",
+        "AuraDefinitionBundleId": "0Ab1N000000AKMBSA4",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AKMBSA4"
+            },
+            "DeveloperName": "LeadOwnerInformation"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000xrw4SAA"
+        },
+        "Id": "0Ad1N000000xrw4SAA",
+        "AuraDefinitionBundleId": "0Ab1N000000AKMBSA4",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AKMBSA4"
+            },
+            "DeveloperName": "LeadOwnerInformation"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000xrs6SAA"
+        },
+        "Id": "0Ad1N000000xrs6SAA",
+        "AuraDefinitionBundleId": "0Ab1N000000AKMBSA4",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AKMBSA4"
+            },
+            "DeveloperName": "LeadOwnerInformation"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000y8GrSAI"
+        },
+        "Id": "0Ad1N000000y8GrSAI",
+        "AuraDefinitionBundleId": "0Ab1N000000ARiGSAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000ARiGSAW"
+            },
+            "DeveloperName": "EstimatorCalendar"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000y8GmSAI"
+        },
+        "Id": "0Ad1N000000y8GmSAI",
+        "AuraDefinitionBundleId": "0Ab1N000000ARiGSAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000ARiGSAW"
+            },
+            "DeveloperName": "EstimatorCalendar"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000y8GwSAI"
+        },
+        "Id": "0Ad1N000000y8GwSAI",
+        "AuraDefinitionBundleId": "0Ab1N000000ARiGSAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000ARiGSAW"
+            },
+            "DeveloperName": "EstimatorCalendar"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yDPYSA2"
+        },
+        "Id": "0Ad1N000000yDPYSA2",
+        "AuraDefinitionBundleId": "0Ab1N000000ATnBSAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000ATnBSAW"
+            },
+            "DeveloperName": "EstimatorCalendarSlot"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yDKtSAM"
+        },
+        "Id": "0Ad1N000000yDKtSAM",
+        "AuraDefinitionBundleId": "0Ab1N000000ATnBSAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000ATnBSAW"
+            },
+            "DeveloperName": "EstimatorCalendarSlot"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yDI6SAM"
+        },
+        "Id": "0Ad1N000000yDI6SAM",
+        "AuraDefinitionBundleId": "0Ab1N000000ATnBSAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000ATnBSAW"
+            },
+            "DeveloperName": "EstimatorCalendarSlot"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yGkbSAE"
+        },
+        "Id": "0Ad1N000000yGkbSAE",
+        "AuraDefinitionBundleId": "0Ab1N000000AVFeSAO",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AVFeSAO"
+            },
+            "DeveloperName": "UpdateCalendar"
+        },
+        "DefType": "EVENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yLaXSAU"
+        },
+        "Id": "0Ad1N000000yLaXSAU",
+        "AuraDefinitionBundleId": "0Ab1N000000AWnESAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AWnESAW"
+            },
+            "DeveloperName": "AppointmentDetail"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yLOQSA2"
+        },
+        "Id": "0Ad1N000000yLOQSA2",
+        "AuraDefinitionBundleId": "0Ab1N000000AWnESAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AWnESAW"
+            },
+            "DeveloperName": "AppointmentDetail"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yJvZSAU"
+        },
+        "Id": "0Ad1N000000yJvZSAU",
+        "AuraDefinitionBundleId": "0Ab1N000000AWnESAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AWnESAW"
+            },
+            "DeveloperName": "AppointmentDetail"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yL5eSAE"
+        },
+        "Id": "0Ad1N000000yL5eSAE",
+        "AuraDefinitionBundleId": "0Ab1N000000AWnESAW",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AWnESAW"
+            },
+            "DeveloperName": "AppointmentDetail"
+        },
+        "DefType": "STYLE",
+        "Format": "CSS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yOWzSAM"
+        },
+        "Id": "0Ad1N000000yOWzSAM",
+        "AuraDefinitionBundleId": "0Ab1N000000AYVeSAO",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AYVeSAO"
+            },
+            "DeveloperName": "EstimatorCalendarCloseModal"
+        },
+        "DefType": "EVENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yOXESA2"
+        },
+        "Id": "0Ad1N000000yOXESA2",
+        "AuraDefinitionBundleId": "0Ab1N000000AYVoSAO",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AYVoSAO"
+            },
+            "DeveloperName": "EstimatorCalendarAppointmentEditor"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yOXOSA2"
+        },
+        "Id": "0Ad1N000000yOXOSA2",
+        "AuraDefinitionBundleId": "0Ab1N000000AYVoSAO",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AYVoSAO"
+            },
+            "DeveloperName": "EstimatorCalendarAppointmentEditor"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yOXTSA2"
+        },
+        "Id": "0Ad1N000000yOXTSA2",
+        "AuraDefinitionBundleId": "0Ab1N000000AYVoSAO",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AYVoSAO"
+            },
+            "DeveloperName": "EstimatorCalendarAppointmentEditor"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yPgkSAE"
+        },
+        "Id": "0Ad1N000000yPgkSAE",
+        "AuraDefinitionBundleId": "0Ab1N000000AZ3eSAG",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AZ3eSAG"
+            },
+            "DeveloperName": "EstimatorCalendarTime"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yPgfSAE"
+        },
+        "Id": "0Ad1N000000yPgfSAE",
+        "AuraDefinitionBundleId": "0Ab1N000000AZ3eSAG",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AZ3eSAG"
+            },
+            "DeveloperName": "EstimatorCalendarTime"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000ydKLSAY"
+        },
+        "Id": "0Ad1N000000ydKLSAY",
+        "AuraDefinitionBundleId": "0Ab1N000000AesFSAS",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AesFSAS"
+            },
+            "DeveloperName": "EstimatorCalendarNewAppointment"
+        },
+        "DefType": "EVENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v39.0/tooling/sobjects/AuraDefinition/0Ad1N000000yg6kSAA"
+        },
+        "Id": "0Ad1N000000yg6kSAA",
+        "AuraDefinitionBundleId": "0Ab1N000000AgKuSAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v39.0/tooling/sobjects/AuraDefinitionBundle/0Ab1N000000AgKuSAK"
+            },
+            "DeveloperName": "EstimatorCalendarSave"
+        },
+        "DefType": "EVENT",
+        "Format": "XML"
+    }
+]

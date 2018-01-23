@@ -1,0 +1,29 @@
+<aura:component >
+    <aura:attribute name="index" type="Integer" description="index of day in dateRange" default="0" />
+    <aura:attribute name="data" type="Object" description="time data" />
+    <aura:attribute name="appMap" type="Object" description="appointments mapped by day and time" />
+    <aura:attribute name="renderModal" type="Boolean" description="flag to open modal" default="false" />
+    <aura:attribute name="lead" type="Lead" description="Lead to generate appointment for" />
+
+    <aura:attribute name="appointment" type="Appointment__c" description="appointment to render (if applicable)" access="private" />
+    <aura:attribute name="datetime" type="Datetime" description="time slot this component represents" access="private" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.appMap}" action="{!c.updateAppointment}" />
+    <aura:handler name="newAppointment" event="c.EstimatorCalendarNewAppointment" action="{!c.handleNewAppointment}" />
+    
+	<td scope="row" onclick="{!c.openModal}">
+		<aura:if isTrue="{!v.appointment}">
+            <div onmouseover="{!c.renderDetail}" onmouseout="{!c.hideDetail}">
+                <span aura:id="popoverContainer" style="float: right;">
+                	<c:AppointmentDetail appointment="{!v.appointment}" />
+                </span>
+                <div class="slds-text-body_regular">
+                	{!v.appointment.Status__c}
+                </div>
+            </div>
+        </aura:if>
+        
+        <c:EstimatorCalendarAppointmentEditor appointment="{!v.appointment}" renderModal="{!v.renderModal}" lead="{!v.lead}" initialDatetime="{!v.datetime}" />
+    </td>
+</aura:component>

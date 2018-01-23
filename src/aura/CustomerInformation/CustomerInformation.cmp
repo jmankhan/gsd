@@ -1,0 +1,30 @@
+<aura:component controller="CreateAppointmentController">
+    <aura:attribute name="lead" type="Lead" />
+
+    <article class="slds-card">
+      <header class="slds-card__header">
+        <h2 class="slds-text-heading_small">Customer Information</h2>
+      </header>
+      <div class="slds-card__body slds-card__body_inner">
+      	<div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                First Name: {!v.lead.FirstName}
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                Last Name: {!v.lead.LastName}
+            </div>
+            <div class="slds-col slds-size_2-of-2">
+                Street Address: {!v.lead.Address.street}
+            </div>
+			<div class="slds-col slds-size_2-of-2">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-3">City: {!v.lead.Address.city}</div>
+                	<div class="slds-col slds-size_1-of-3">State: {!v.lead.Address.state}</div>
+                    <div class="slds-col slds-size_1-of-3">Zip Code: {!v.lead.Address.postalCode}</div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </article>
+
+</aura:component>

@@ -1,0 +1,124 @@
+<aura:component controller="CreateAppointmentController">
+    <aura:attribute name="lead" type="Lead" description="Lead that is being assigned an appointment" />
+    <aura:attribute name="appointment" type="Appointment__c" description="Appointment to edit. Not required" />
+    <aura:attribute name="renderModal" type="Boolean" description="flag to control visibility of modal" />
+    <aura:attribute name="appointmentLocal" type="Appointment__c" description="Local copy because change handler is messing up with value passed by parent" access="private" />
+    <aura:attribute name="initialDatetime" type="Datetime" description="datetime this editor should be initialized at" />
+    
+    <aura:attribute name="editMode" type="Boolean" default="false" access="private" />
+    <aura:attribute name="leadLocal" type="Lead" access="private" />
+    <aura:attribute name="minutes" type="Integer[]" default="[]" access="private" />
+    <aura:attribute name="selectedHour" type="Integer" access="private" />
+    <aura:attribute name="selectedMinute" type="Integer" access="private" />
+    <aura:attribute name="selectedMeridiem" type="String" access="private" />
+    <aura:attribute name="selectedSubject" type="String" access="private" />
+	<aura:attribute name="selectedStatus" type="String" access="private" />    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.appointment}" action="{!c.updateAppointment}" />
+    <aura:handler name="change" value="{!v.renderModal}" action="{!c.toggleRender}" />
+    <aura:handler name="change" value="{!v.lead}" action="{!c.updateLead}" />
+    <aura:handler name="change" value="{!v.initialDatetime}" action="{!c.updateDatetime}" />
+    <aura:registerEvent name="newAppointment" type="c:EstimatorCalendarNewAppointment" />
+    
+    <aura:if isTrue="{!v.renderModal}">
+	   <div role="dialog" tabindex="-1" aria-labelledby="header43" aura:id="Modalbox" class="slds-modal">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.cancel}">
+                        <lightning:icon iconName="utility:close" size="small" variant="inverse" />
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 class="slds-text-heading--medium">{!v.editMode ? 'Edit Appointment' : 'Create an Appointment'}</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-form">
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Assigned To</label>
+                            <div class="slds-form-element__control">
+                                <aura:if isTrue="{!v.editMode}">
+                               		<lightning:formattedText value="{!v.appointment.Owner.Name}" />
+                                    <aura:set attribute="else">
+                                        <lightning:formattedText value="{!v.leadLocal.Owner.Name}" />
+                                    </aura:set>
+                                </aura:if>
+                               
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Initial Appointment Date</label>
+                            <div class="slds-form-element__control">
+                                <aura:if isTrue="{!v.editMode}">
+                                	<lightning:formattedDateTime value="{!v.appointment.Start_Time__c}" year="2-digit" month="short" day="2-digit" weekday="long"/>
+                                    <aura:set attribute="else">
+                                    	<lightning:formattedDateTime value="{!v.initialDatetime}" year="2-digit" month="short" day="2-digit" weekday="long"/>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Initial Appointment Time</label>
+                            <div class="slds-form-element__control slds-grid">
+                                <lightning:select aura:id="hourSelector" name="initialHours" value="{!v.selectedHour}" class="slds-col slds-size_1-of-3">
+                                    <aura:iteration items="01,02,03,04,05,06,07,8,9,10,11,12" var="hour">
+                                        <option value="{!hour}" text="{!hour}" selected="{!hour == v.selectedHour}" />
+                                    </aura:iteration>
+                                </lightning:select>
+                                <lightning:select name="initialMinutes" value="{!v.selectedMinute}" class="slds-col slds-size_1-of-3">
+                                    <aura:iteration items="{!v.minutes}" var="minute">
+                                    	<option value="{!minute}" text="{!minute}" />
+                                    </aura:iteration>
+                                </lightning:select>
+                                <lightning:select aura:if="meridiemSelector" name="initialMeridiem" value="{!v.selectedMeridiem}" class="slds-col slds-size_1-of-3">
+                                    <option value="AM" text="AM" selected="{!v.selectedMeridiem == 'AM'}"/>
+                                    <option value="PM" text="PM" selected="{!v.selectedMeridiem == 'PM'}"/>
+                                </lightning:select>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Email</label>
+                            <div class="slds-form-element__control">
+	                            <lightning:formattedText value="{!v.leadLocal.Email}" linkify="{!true}" />
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Phone</label>
+                            <div class="slds-form-element__control">
+                                <lightning:formattedPhone value="{!v.leadLocal.Phone}"/>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Subject</label>
+                            <div class="slds-form-element__control">
+                                <lightning:select value="{!v.selectedSubject}">
+                                    <option value="Appointment" text="Appointment" selected="{!true}" />
+                                </lightning:select>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Show Time As:</label>
+                            <div class="slds-form-element__control">
+                                <lightning:select name="status" value="{!v.selectedStatus}">
+                                    <option value="Busy" text="Busy" />
+                                    <option value="Free" text="Free" />
+                                </lightning:select>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+                            <label class="slds-form-element__label">Location</label>
+                            <div class="slds-form-element__control">
+                                <lightning:formattedText value="{!v.leadLocal.Address.city}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick="{!c.cancel}">Cancel</button>
+                    <button class="slds-button slds-button_brand" onclick="{!c.save}">Save</button>
+                </div>
+            </div>
+    	</div>
+    	<div class="slds-backdrop " aura:id="Modalbackdrop"></div>
+
+    </aura:if>
+</aura:component>

@@ -1,0 +1,52 @@
+<aura:component controller="EstimatorCalendarController">
+    <aura:attribute name="timeRange" type="String[]" description="Time range of each day to view" access="private" />
+    <aura:attribute name="dateRange" type="String[]" description="Date range of each day to view" access="private" />
+    <aura:attribute name="days" type="String[]" description="Days of the week, starting at Sunday." default="['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']" access="private" />
+    <aura:attribute name="dateData" type="Object" description="List of formatted and raw datetime data" access="private" />
+    <aura:attribute name="appointmentsMap" type="Object" description="Map of appointments keyed by time slot" access="private" />
+    <aura:attribute name="appointments" type="Object[]" description="Appointments listed on calendar. Must be passed in as an attribute, but will be managed afterwards." access="public" />
+    <aura:attribute name="lead" type="Lead" description="Lead to generate appointment for" />
+    <aura:attribute name="rowCounter" type="Integer" access="private" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:UpdateCalendar" action="{!c.updateAppointments}" />
+    <aura:registerEvent name="saveAppointments" type="c:EstimatorCalendarSave" />
+    
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+    	<thead>
+            <tr>
+                <th scope="col"><!-- blank col for times --></th>
+                <aura:iteration items="{!v.days}" var="day">
+                    <th scope="col">{!day}</th>
+	            </aura:iteration>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- display header row for dates -->
+            <tr>
+                <td><!-- blank td for time column --></td>
+                <aura:iteration items="{!v.dateRange}" var="date">
+                    <td>{!date}</td>
+                </aura:iteration>
+            </tr>
+            <!-- display each time row. Each cell becomes a timeslot. Due to limitations with aura:iteration, manually pass index to calendar slot. -->
+            <aura:if isTrue="{!v.appointmentsMap}">
+                <aura:iteration items="{!v.timeRange}" var="timeSlot" indexVar="rowIndex">
+                    <tr>
+                        <th scope="row">{!timeSlot}</th>
+                        <c:EstimatorCalendarSlot data="{!v.dateData}" appMap="{!v.appointmentsMap}" lead="{!v.lead}" index="{!7*rowIndex}" />
+                        <c:EstimatorCalendarSlot data="{!v.dateData}" appMap="{!v.appointmentsMap}" lead="{!v.lead}" index="{!7*rowIndex+1}" />
+						<c:EstimatorCalendarSlot data="{!v.dateData}" appMap="{!v.appointmentsMap}" lead="{!v.lead}" index="{!7*rowIndex+2}" />
+                        <c:EstimatorCalendarSlot data="{!v.dateData}" appMap="{!v.appointmentsMap}" lead="{!v.lead}" index="{!7*rowIndex+3}" />
+                        <c:EstimatorCalendarSlot data="{!v.dateData}" appMap="{!v.appointmentsMap}" lead="{!v.lead}" index="{!7*rowIndex+4}" />
+                        <c:EstimatorCalendarSlot data="{!v.dateData}" appMap="{!v.appointmentsMap}" lead="{!v.lead}" index="{!7*rowIndex+5}" />
+                        <c:EstimatorCalendarSlot data="{!v.dateData}" appMap="{!v.appointmentsMap}" lead="{!v.lead}" index="{!7*rowIndex+6}" />
+                    </tr>
+                </aura:iteration>
+            </aura:if>
+        </tbody>
+    </table>
+    <div class="slds-align_absolute-center">
+    	<button class="slds-button slds-button_brand" onclick="{!c.submit}">Save</button>
+    </div>
+</aura:component>

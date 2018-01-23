@@ -1,0 +1,18 @@
+{
+    "projectName": "GSDInterview",
+    "username": "jalal.khan@gmail.com",
+    "id": "73e4d910-0088-11e8-86e2-3996b00ef846",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://jalalkhan-dev-ed.my.salesforce.com",
+    "workspace": "C:\\Users\\jalal.khan\\my\\workspace",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "AuraDefinitionBundle",
+        "StaticResource"
+    ]
+}

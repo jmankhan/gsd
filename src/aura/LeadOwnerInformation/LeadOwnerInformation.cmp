@@ -1,0 +1,29 @@
+<aura:component controller="CreateAppointmentController" >
+    <aura:attribute name="lead" type="Lead" />
+    <aura:attribute name="leadOwner" type="Object" access="private"/>
+    
+    <aura:handler name="change" value="{!v.lead}" action="{!c.doInit}" />
+    
+    <article class="slds-card">
+      <header class="slds-card__header">
+        <h2 class="slds-text-heading_small">Lead Owner Information</h2>
+      </header>
+      <div class="slds-card__body slds-card__body_inner">
+      	<div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                First Name: {!v.leadOwner.FirstName}
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                Last Name: {!v.leadOwner.LastName}
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                Phone Number: {!v.leadOwner.Phone}
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                Email: {!v.leadOwner.Email}
+            </div>
+        </div>
+      </div>
+    </article>
+	
+</aura:component>
